@@ -1,15 +1,25 @@
 {
-  "name": "src",
+  "name": "campushub-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Backend REST API for CampusHub, a platform for students to connect and collaborate on projects and internship activities.",
+  "main": "dist/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "cross-env NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
-  "keywords": [],
+  "keywords": [
+    "campushub",
+    "api",
+    "internships",
+    "typescript",
+    "express",
+    "mongodb"
+  ],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
